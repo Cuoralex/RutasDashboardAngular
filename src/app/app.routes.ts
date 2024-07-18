@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './presentation/layout/dashboard/dashboard.component';
+import { DashboardComponent } from './presentation/layouts/dashboard/dashboard.component';
 
 export const routes: Routes = [
+   { 
     path:'',
-    Component: DashboardComponent,
+    component: DashboardComponent,
     children: [
         {
             path:'home',
@@ -16,5 +16,16 @@ export const routes: Routes = [
                 description: 'Pagina de inicio',
             },
         },
-    ]
+        {
+            path:'about',
+            loadComponent: () =>
+                import('./presentation/pages/about/about.component'),
+            data: {
+                icon:'about',
+                title: 'Acerca de',
+                description: 'Acerca de',
+            },
+        },
+   ]
+}
 ];

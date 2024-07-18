@@ -1,23 +1,24 @@
-//Angular
+/*Angular*/
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
-//App
-import { SideBarMenuComponent } from '../../components/sideBarMenu/sideBarMenu.component';
+/*App*/
+import { SideBarMenuItemComponent } from '../../components/sideBarMenuItem/sideBarMenuItem.component';
 import { routes } from '../../../app.routes';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
+  templateUrl: './menu.component.html',
+  styleUrl: './menu.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     CommonModule,
     RouterModule,
-    SideBarMenuComponent
+    SideBarMenuItemComponent,
 ],
 
-  templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  
 })
 export class MenuComponent {
 @Output() optionClicked = new EventEmitter<string>();

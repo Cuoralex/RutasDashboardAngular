@@ -8,7 +8,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     CommonModule,
   ],
   templateUrl: './global.component.html',
-  styleUrl: './global.component.css',
+  styleUrl: './global.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GlobalComponent { }
+

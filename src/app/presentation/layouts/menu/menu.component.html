@@ -4,13 +4,13 @@
     <div class="border-gray-700 border my-3"></div>
     <!--Nav link-->
     @for (route of routes; track route.path){
-        <app-side-bar-menu
-        [description]="route.data!['description']"
-        [icon]="route.data!['icon']"
-        [title]="route.data!['title']"
-        [path]="route.path!"
-        (clic)="optionClick(route.data!['description'])"
-        />
+        <app-side-bar-menu-item
+            [description]="route.data!['description']"
+            [icon]="route.data!['icon']"
+            [title]="route.data!['title']"
+            [path]="route.path!"
+            (clic)="optionClick(route.data!['title'])"
+            />
     }
     <!--End nav links-->
     <!--[path]="route.path!"Bucle que con path que pasa por todas las rutas-->

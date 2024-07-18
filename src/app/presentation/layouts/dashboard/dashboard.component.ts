@@ -21,7 +21,7 @@ import { MenuComponent } from "../menu/menu.component";
     MenuComponent
 ],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css',
+  styleUrl: './dashboard.component.scss',
   changeDetection: ChangeDetectionStrategy.Default,
 })
 export class DashboardComponent { }
